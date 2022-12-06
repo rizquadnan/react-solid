@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Form } from "./form";
+import { Form } from "./good";
 
 export function ConnectedForm() {
   const handleSubmit = async (email: string, password: string) => {

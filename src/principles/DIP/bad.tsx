@@ -1,27 +1,19 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-interface IFormProps {
-  onSubmit: (email: string, password: string) => void;
-}
+interface IFormProps {}
 
 export function Form(props: IFormProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { onSubmit } = props;
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-
-  //   await axios.post("https://localhost:3000/login", {
-  //     email,
-  //     password,
-  //   });
-  // };
-
-  const handleSubmit2 = (e: React.FormEvent) => {
-    onSubmit(email, password);
+    await axios.post("https://localhost:3000/login", {
+      email,
+      password,
+    });
   };
 
   return (
@@ -34,7 +26,7 @@ export function Form(props: IFormProps) {
             </h1>
             <form
               className="space-y-4 md:space-y-6"
-              onSubmit={handleSubmit2}
+              onSubmit={handleSubmit}
             >
               <div>
                 <label
