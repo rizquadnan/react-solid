@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import styled from "styled-components";
-import { Thumbnail } from "./thumbnail";
+import { Thumbnail } from "./good";
 
 export interface IProduct {
   id: string;
