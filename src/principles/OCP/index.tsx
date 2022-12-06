@@ -1,4 +1,4 @@
-import { Button } from "./button";
+import { GoodButton } from "./good";
 import {
   HiOutlineArrowNarrowRight,
   HiOutlineArrowNarrowLeft,
@@ -7,14 +7,12 @@ import {
 export function OCP() {
   return (
     <div className="flex space-x-10">
-      <Button
+      <GoodButton
         text="Go Home"
-        // role="forward"
         icon={<HiOutlineArrowNarrowRight />}
       />
-      <Button
+      <GoodButton
         text="Go Back"
-        // role="back"
         icon={<HiOutlineArrowNarrowLeft />}
       />
     </div>

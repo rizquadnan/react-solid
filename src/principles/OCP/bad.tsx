@@ -6,7 +6,7 @@ import {
 interface IButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
-  role?: "back" | "forward" | "main" | "not-found";
+  role?: "back" | "forward";
   icon?: React.ReactNode;
 }
 
@@ -20,9 +20,9 @@ export function Button(props: IButtonProps) {
     >
       {text}
       <div className="m-2">
-        {/* {role === "forward" && <HiOutlineArrowNarrowRight />}
-        {role === "back" && <HiOutlineArrowNarrowLeft />} */}
-        {icon}
+        {role === "forward" && <HiOutlineArrowNarrowRight />}
+        {role === "back" && <HiOutlineArrowNarrowLeft />}
+        {/* Violating OCP because: if you want to add more icons you need to modify the source code here */}
       </div>
     </button>
   );
