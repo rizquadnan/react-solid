@@ -6,7 +6,7 @@ interface ISearchInputProps
 }
 
 export function SearchInput(props: ISearchInputProps) {
-  const { value, onChange, isLarge, ...restProps } = props;
+  const { isLarge, value, onChange } = props;
 
   return (
     <div className="flex w-10/12">
@@ -39,7 +39,6 @@ export function SearchInput(props: ISearchInputProps) {
           required
           value={value}
           onChange={onChange}
-          {...restProps}
         />
       </div>
     </div>

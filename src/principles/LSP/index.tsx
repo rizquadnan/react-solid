@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SearchInput } from "./searchInput";
+import { SearchInput } from "./good";
 
 export function LSP() {
   const [value, setValue] = useState("");
